@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To do List </title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h2 class="title">To do List</h2>
+
+      <!-- Form input to do -->
+      <form id="to do-form" class="form">
+        <input id="task-input" type="text" placeholder="Add a task..." />
+        <input id="date-input" type="date" />
+        <button id="add-btn" type="submit">Add</button>
+      </form>
+
+      <!-- Filter dan tombol clear -->
+      <div class="controls">
+        <input id="search-input" type="text" placeholder="Filter by text..." />
+        <div class="filters">
+          <button data-filter="all" class="filter active">All</button>
+          <button data-filter="active" class="filter">Active</button>
+          <button data-filter="completed" class="filter">Completed</button>
+        </div>
+      </div>
+
+      <!-- Daftar to do -->
+      <div class="list-wrapper">
+        <table id="to do-table">
+          <thead>
+            <tr><th>Task</th><th>Date</th><th>Action</th></tr>
+          </thead>
+          <tbody id="to do-body">
+            <!-- rows inserted by JS -->
+          </tbody>
+        </table>
+
+        <p id="empty-msg" class="empty">No task found</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
